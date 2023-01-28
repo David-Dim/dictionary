@@ -33,5 +33,56 @@
     />
     <title>Dictionary</title>
   </head>
-  <body></body>
+  <body>
+    <div class="app">
+      <main class="main">
+        <h1>Your best <span>Dictionary</span></h1>
+
+        <form
+          action="#"
+          class="form"
+        >
+          <div class="form-group">
+            <input
+              type="text"
+              name="word"
+              id="word-input"
+              placeholder="Type a word..."
+              autocomplete="off"
+              value=""
+            />
+          </div>
+          <button type="submit">Search</button>
+        </form>
+        <div class="error">Word not found</div>
+
+        <div class="results">
+          <div class="results-info">
+            <div class="results-word">
+               Result
+            </div>
+            <div class="result-sound">
+              <img src="./assets/images/sound.png" alt="image">
+            </div>
+
+          </div>
+          <div class="results-list">
+            <div class="results-item">
+              <div class="results-item__part">
+                Noun
+              </div>
+              <div class="results-item__definitions">
+                <div class="results-item__definition">
+                  <p>Lorem, ipsum dolor.</p>
+                  <div class="results-item__example">
+                    Lorem ipsum dolor sit amet consectetur.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>
