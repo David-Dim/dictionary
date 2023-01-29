@@ -9,17 +9,22 @@ let state = {
 const url = 'https://api.dictionaryapi.dev/api/v2/entries/en/'
 const input = document.getElementById('word-input')
 const form = document.querySelector('.form')
+const containerWord = document.querySelector('.results-word')
+
+const insertWord = () => {
+  containerWord.innerText = state.word
+}
 
 const handleSubmit = async (e) => {
   e.preventDefault()
   if (!state.word.trim()) return
-  try{
+  try {
     const response = await fetch(`${url}${state.word}`)
     const data = await response.json()
-    if(response.ok && data.length){
-      
+    if (response.ok && data.length) {
+      insertWord()
     }
-  } catch(err){
+  } catch (err) {
     console.log(err)
   }
   console.log(data)
